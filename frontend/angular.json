@@ -25,13 +25,24 @@
               }
             ],
             "styles": [
-              "src/styles.css",
               "node_modules/bootstrap/dist/css/bootstrap.css",
-              "node_modules/@fortawesome/fontawesome-free/css/all.css"
-
+              "node_modules/@fortawesome/fontawesome-free/css/all.css",
+              "src/assets/vendor/boxicons/css/boxicons.min.css",
+              "src/assets/vendor/venobox/venobox.css",
+              "src/assets/vendor/owl.carousel/assets/owl.carousel.min.css",
+              "src/assets/vendor/aos/aos.css",
+              "src/assets/css/style.css",
+              "src/assets/css/mycard.css",
+              "src/styles.css"
             ],
             "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.js"
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "src/assets/vendor/isotope-layout/isotope.pkgd.min.js",
+              "src/assets/vendor/venobox/venobox.min.js",
+              "src/assets/vendor/owl.carousel/owl.carousel.min.js",
+              "src/assets/vendor/typed.js/typed.min.js",
+              "src/assets/vendor/aos/aos.js",
+              "src/assets/js/main.js"
             ]
           },
           "configurations": {
@@ -82,6 +93,8 @@
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
+              "src/assets",
+              "src/favicon.ico",
               {
                 "glob": "**/*",
                 "input": "public"
