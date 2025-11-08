@@ -1,13 +1,13 @@
-package com.spring.friendfinder;
+package com.spring.restaurant;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class FriendfinderApplication {
+public class RestaurantApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(FriendfinderApplication.class, args);
+        SpringApplication.run(RestaurantApplication.class, args);
     }
 
 }

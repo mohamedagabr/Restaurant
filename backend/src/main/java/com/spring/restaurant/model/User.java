@@ -1,9 +1,6 @@
-package com.spring.friendfinder.model;
+package com.spring.restaurant.model;
 
-import com.spring.friendfinder.enums.Gender;
-import jakarta.persistence.Entity;
-import lombok.Getter;
-import lombok.Setter;
+import com.spring.restaurant.enums.Gender;
 
 import java.util.*;
 import java.util.Date;

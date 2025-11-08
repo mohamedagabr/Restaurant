@@ -1,4 +1,4 @@
-package com.spring.friendfinder.model;
+package com.spring.restaurant.model;
 
 public class Post {
     private int postId;

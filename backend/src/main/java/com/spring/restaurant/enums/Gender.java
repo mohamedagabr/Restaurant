@@ -1,4 +1,4 @@
-package com.spring.friendfinder.enums;
+package com.spring.restaurant.enums;
 
 public enum Gender {
     MALE,FEMALE
