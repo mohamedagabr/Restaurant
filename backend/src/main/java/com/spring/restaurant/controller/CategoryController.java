@@ -19,6 +19,7 @@ public class CategoryController {
     public CategoryController(CategoryService categoryService) {
         this.categoryService = categoryService;
     }
+
     @GetMapping
 
     private List<Category> getCategories() {
