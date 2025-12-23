@@ -33,6 +33,9 @@
               "src/styles.css"
             ],
             "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/waypoints/lib/jquery.waypoints.min.js",
+              "node_modules/counterup2/dist/index.js",
               "node_modules/bootstrap/dist/js/bootstrap.bundle.js",
               "src/assets/vendor/isotope-layout/isotope.pkgd.min.js",
               "src/assets/vendor/venobox/venobox.min.js",

@@ -1159,3 +1159,23 @@ section {
   background-color: tomato;
 
 }
+
+.order-item-card{
+ height: 450px;
+}
+.order-item-card-btn{
+  position: absolute;
+  bottom: 0;
+  width: 100%
+}
+.img{
+  height: 200px;
+}
+.card{
+  height: 450px;
+}
+
+.btn:not(:disabled):not(.disabled){
+  margin: 0px 0px 0px 0px !important;
+}
+

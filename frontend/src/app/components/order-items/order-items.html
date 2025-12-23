@@ -1,0 +1,13 @@
+<div class="row">
+@for (temp of orders; track temp){
+  <div class="col-md-4 myorder">
+  <div  class="card order-item-card">
+    <img src="assets/img/{{temp.image}}.jpg" alt="Denim Jeans" style="width:100%">
+    <h1>{{temp.orderName}}</h1>
+    <p class="price">{{temp.orderPrice}}</p>
+    <p class="dis">{{temp.orderDescription}}</p>
+    <button class="btn btn-primary order-item-card-btn">Add to Cart</button>
+  </div>
+</div>
+}
+</div>
