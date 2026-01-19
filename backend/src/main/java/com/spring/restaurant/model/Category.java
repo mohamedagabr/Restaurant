@@ -26,6 +26,8 @@ public class Category {
     private int categoryId;
     @Column(name = "category_name", unique = true, nullable = false)
     private String categoryName;
+    @Column(name = "category_logo")
+    private String categoryLogo;
 
  @OneToMany(mappedBy = "category")
  @JsonIgnore
