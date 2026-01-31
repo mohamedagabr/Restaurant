@@ -9,6 +9,8 @@ import {Order} from '../model/order';
 export class OrderService {
 
   private baseUrl = 'http://localhost:8080/orders';
+  //private ordersByCategoryIdUrl = 'http://localhost:8080/orders/byCategory?categoryId=';
+
 
   constructor(private http: HttpClient) { }
 
@@ -18,7 +20,11 @@ export class OrderService {
         response => response
       )
     )
-
+  }
+  getOrdersByCategoryId(id: number){
+    return this.http.get<Order[]>(
+      `${this.baseUrl}/byCategory?categoryId=${id}`
+    );
   }
 
 }

@@ -3,10 +3,7 @@ package com.spring.restaurant.controller;
 import com.spring.restaurant.model.Order;
 import com.spring.restaurant.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -26,5 +23,18 @@ public class OrderController {
     public List<Order> getAllOrders() {
         return orderService.getAllOrders();
     }
+
+
+//    @GetMapping("/{id}")
+//    public List<Order> getOrderByCategoryId(@PathVariable Integer id) {
+//        return orderService.getOrderByCategoryId(id);
+//    }
+
+    @GetMapping("/byCategory")
+    public List<Order> getOrderByCategoryId(@RequestParam Integer categoryId){
+         return  orderService.getOrderByCategoryId(categoryId);
+    }
+
+
 
 }
