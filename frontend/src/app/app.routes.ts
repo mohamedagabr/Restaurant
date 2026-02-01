@@ -7,15 +7,14 @@ import {CategoryItems} from './components/category-items/category-items';
    { path: 'category/:id', component: OrderItems },     // الترتيب مهم
   //  Path http://localhost:4200/category
   { path: 'category', component: OrderItems },
-   //  Path http://localhost:4200/orders/id
-   { path: 'orders/:id', component: OrderItems },
-   //  Path http://localhost:4200/orders
+
+   { path: 'orders/category/:id', component: OrderItems },
+   { path: 'orders/search/:orderName', component: OrderItems },
    { path: 'orders', component: OrderItems },
+
    //  Path http://localhost:4200/
    { path: '', redirectTo: '/orders', pathMatch: 'full' },
    // if users enter anything wrong
    { path: '**', redirectTo: '/orders', pathMatch: 'full' },
-
-
  ];
 

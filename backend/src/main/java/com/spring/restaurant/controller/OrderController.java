@@ -34,6 +34,10 @@ public class OrderController {
     public List<Order> getOrderByCategoryId(@RequestParam Integer categoryId){
          return  orderService.getOrderByCategoryId(categoryId);
     }
+    @GetMapping("/byOrderName")
+    public List<Order> getOrderByOrderName(@RequestParam String orderName){
+        return orderService.getOrderByOrderName(orderName);
+    }
 
 
 

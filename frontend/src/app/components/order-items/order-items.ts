@@ -24,10 +24,14 @@ export class OrderItems implements OnInit{
     this.route.paramMap.subscribe(params => {
 
       const id = params.get('id');
+      const name = params.get('orderName');
 
       if (id) {
         this.getOrdersByCategoryId(+id);
-      } else {
+      }else if (name){
+        this.getOrdersByOrderName(name);
+      }
+      else {
         this.getOrders();
       }
 
@@ -45,6 +49,14 @@ export class OrderItems implements OnInit{
       .subscribe(data =>{
         this.orders = data
       }
+      );
+  }
+
+  getOrdersByOrderName(orderName: string){
+    this.orderService.getOrderByOrderName(orderName)
+      .subscribe(data =>{
+          this.orders = data
+        }
       );
   }
 

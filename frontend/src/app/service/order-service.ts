@@ -27,4 +27,10 @@ export class OrderService {
     );
   }
 
+  getOrderByOrderName(orderName: String){
+    return this.http.get<Order[]>(
+      `${this.baseUrl}/byOrderName?orderName=${orderName}`
+    );
+  }
+
 }

@@ -25,4 +25,8 @@ public class OrderService {
         return orderRepository.findOrderByCategoryCategoryId(categoryId);
     }
 
+    public List<Order> getOrderByOrderName(String orderName){
+        return orderRepository.findByOrderNameContainingIgnoreCase(orderName);
+    }
+
 }

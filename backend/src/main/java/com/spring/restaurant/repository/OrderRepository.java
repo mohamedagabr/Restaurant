@@ -12,4 +12,6 @@ public interface OrderRepository extends JpaRepository<Order, Integer> {
 
     public List<Order> findOrderByCategoryCategoryId(int categoryId);
 
+    public List<Order> findByOrderNameContainingIgnoreCase(String orderName);
+
 }
