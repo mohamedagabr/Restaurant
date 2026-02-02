@@ -4,6 +4,8 @@ import {CategoryItems} from './components/category-items/category-items';
 import {Router, RouterModule, RouterOutlet, Routes} from '@angular/router';
 import {DropdownMenu} from './components/dropdown-menu/dropdown-menu';
 import {SearchOrder} from './components/search-order/search-order';
+import {AdminDashboard} from './components/admin/admin-dashboard/admin-dashboard';
+
 
 
 @Component({
@@ -11,10 +13,11 @@ import {SearchOrder} from './components/search-order/search-order';
   standalone: true,
   imports: [
     RouterOutlet,
+    RouterModule,
     CommonModule,
     CategoryItems,
     DropdownMenu,
-    SearchOrder
+    SearchOrder,
   ],
 
   templateUrl: './app.html',

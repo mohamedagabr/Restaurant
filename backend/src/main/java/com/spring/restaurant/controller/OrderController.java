@@ -39,6 +39,21 @@ public class OrderController {
         return orderService.getOrderByOrderName(orderName);
     }
 
+    @PostMapping
+    public Order addOrder(@RequestBody Order order){
+        return orderService.addOrder(order);
+    }
+
+    @PutMapping
+    public Order updateOrder(@RequestBody Order order){
+        return orderService.updateOrder(order);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteOrder(@PathVariable Integer id){
+        orderService.deleteOrder(id);
+    }
+
 
 
 }

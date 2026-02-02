@@ -55,19 +55,37 @@
     <app-search-order></app-search-order>
     </div>
 
-    <div class="statusCard">
-      <span class="span">$50000<i class="fas fa-coins"></i> | 200</span>
-      <i class="fas fa-cart-arrow-down"></i>
+
+
+    <div class="d-flex align-items-center gap-2">
+
+      <div class="statusCard">
+        <span class="span">$50000<i class="fas fa-coins"></i> | 200</span>
+        <i class="fas fa-cart-arrow-down"></i>
+      </div>
+
+      <!-- Admin Button -->
+      <button
+        type="button"
+        class="btn btn-warning btn-sm"
+        routerLink="/admin">
+        <i class="fas fa-user-cog"></i>
+        Admin
+      </button>
+
     </div>
+
+
+
+
   </div>
 </nav>
 <!-- Start Order -->
-<nav class="maindiv">
-  <div class="container">
-  <!-- <app-order-items></app-order-items> -->
+<div class="maindiv">
+  <div class="container-fluid px-4">
     <router-outlet></router-outlet>
   </div>
-</nav>
+</div>
 <!-- ======= Footer ======= -->
 <footer id="footer">
   <div class="container">

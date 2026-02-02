@@ -29,4 +29,16 @@ public class OrderService {
         return orderRepository.findByOrderNameContainingIgnoreCase(orderName);
     }
 
+    public Order addOrder(Order order){
+        return orderRepository.save(order);
+    }
+
+    public Order updateOrder(Order order){
+        return orderRepository.save(order);
+    }
+
+    public void deleteOrder(Integer orderId){
+        orderRepository.deleteById(orderId);
+    }
+
 }
