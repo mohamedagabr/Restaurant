@@ -1,0 +1,13 @@
+
+<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+  @for (temp of categories; track temp.categoryId){
+      <a
+        class="dropdown-item"
+        [routerLink]="['/category', temp.categoryId]"
+        routerLinkActive="menu-active"
+        [routerLinkActiveOptions]="{ exact: true }">
+      <i [class]="temp.categoryLogo"></i>
+      {{ temp.categoryName }}
+    </a>
+  }
+</div>

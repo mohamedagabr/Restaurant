@@ -1,0 +1,64 @@
+<div class="container mt-4">
+  <h2 class="mb-4">📂 Manage Categories</h2>
+
+  <button class="btn btn-primary mb-3" (click)="openAdd()" data-bs-toggle="modal" data-bs-target="#categoryModal">
+    Add Category
+  </button>
+
+  <table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Logo</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let category of categories">
+      <td>{{ category.categoryId }}</td>
+      <td>{{ category.categoryName }}</td>
+      <td><i [class]="category.categoryLogo"></i></td>
+      <td>
+        <button class="btn btn-sm btn-info me-2" (click)="openEdit(category)" data-bs-toggle="modal" data-bs-target="#categoryModal">
+          Edit
+        </button>
+        <button class="btn btn-sm btn-danger" (click)="deleteCategory(category.categoryId)">
+          Delete
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <!-- Modal for Add/Edit -->
+  <div class="modal fade" id="categoryModal" tabindex="-1" aria-labelledby="categoryModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">{{ isEditMode ? 'Edit Category' : 'Add Category' }}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form #categoryForm="ngForm">
+            <div class="mb-3">
+              <label class="form-label">Category Name</label>
+              <input type="text" class="form-control" [(ngModel)]="selectedCategory.categoryName" name="categoryName" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Category Logo (CSS class)</label>
+              <input type="text" class="form-control" [(ngModel)]="selectedCategory.categoryLogo" name="categoryLogo">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary" (click)="saveCategory()" data-bs-dismiss="modal">
+            {{ isEditMode ? 'Update' : 'Add' }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

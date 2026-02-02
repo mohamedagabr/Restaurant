@@ -1,0 +1,12 @@
+<!--
+<form class="d-flex myform">
+  <input #key class="mygro form-control me-2" type="search" placeholder="Search" aria-label="Search">
+  <button (click) = "doSearch(key.value)" class="mygro btn btn-outline-success" type="submit">Search</button>
+</form>
+-->
+
+<!-- if i need to get data just fill input field (key listen to input) -->
+<form class="d-flex myform">
+  <input (keyup) = "doSearch(key.value)" #key class="mygro form-control me-2" type="search" placeholder="Search" aria-label="Search">
+  <button (click) = "doSearch(key.value)" class="mygro btn btn-outline-success" type="submit">Search</button>
+</form>

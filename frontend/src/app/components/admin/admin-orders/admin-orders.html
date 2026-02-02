@@ -1,0 +1,71 @@
+<div class="container-fluid">
+
+  <!-- Header -->
+  <div class="card-header d-flex justify-content-between align-items-center">
+
+    <h5 class="mb-0">Orders Management</h5>
+
+    <button class="btn btn-success" (click)="openAdd()">
+      + Add Order
+    </button>
+
+  </div>
+
+  <!-- Table -->
+  <div class="table-responsive">
+
+    <table class="table table-striped table-hover">
+
+      <thead class="table-dark">
+      <tr>
+        <th>ID</th>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Category</th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+
+      <tbody>
+
+        @for (o of orders; track o.orderId) {
+          <tr>
+            <td>{{o.orderId}}</td>
+
+            <td>
+              <img width="50" [src]="'assets/img/' + o.image + '.jpg'">
+            </td>
+
+            <td>{{o.orderName}}</td>
+
+            <td>{{o.orderPrice}}</td>
+
+            <td>{{o.category?.categoryName}}</td>
+
+            <td>
+
+              <button
+                class="btn btn-sm btn-primary me-2"
+                (click)="edit(o)">
+                Edit
+              </button>
+
+              <button
+                class="btn btn-sm btn-danger"
+                (click)="delete(o.orderId)">
+                Delete
+              </button>
+
+            </td>
+          </tr>
+        }
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+</div>
+
