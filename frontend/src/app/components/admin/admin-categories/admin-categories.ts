@@ -38,6 +38,7 @@ export class AdminCategories implements OnInit {
   openEdit(category: Category) {
     this.isEditMode = true;
     this.selectedCategory = { ...category };
+    console.log(this.selectedCategory);
   }
 
   saveCategory() {

@@ -38,6 +38,7 @@ export class AdminOrders implements OnInit {
 
   ngOnInit(): void {
     this.loadOrders();
+    this.loadCategories();
   }
 
   // Load all orders
@@ -45,6 +46,12 @@ export class AdminOrders implements OnInit {
     this.orderService.getOrders().subscribe({
       next: (data) => this.orders = data,
       error: (err) => console.error('Failed to load orders', err)
+    });
+  }
+  loadCategories() {
+    this.categoryService.getCategories().subscribe({
+      next: (data) => this.categories = data,
+      error: (err) => console.error('Failed to load categories', err)
     });
   }
 
@@ -127,7 +134,10 @@ export class AdminOrders implements OnInit {
   // Close modal
   closeModal() {
     const modalEl = document.getElementById('orderModal');
-    if (modalEl) new Modal(modalEl).hide();
+    if (!modalEl) return;
+
+    const modal = Modal.getInstance(modalEl); // 👈 المهم
+    modal?.hide();
   }
 
 }

@@ -54,5 +54,4 @@ export class OrderService {
     return this.http.get<Order>(`${this.baseUrl}/${orderId}`);
   }
 
-
 }

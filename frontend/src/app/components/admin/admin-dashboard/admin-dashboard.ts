@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {RouterOutlet} from '@angular/router';
+import {RouterLink, RouterOutlet} from '@angular/router';
 import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 
@@ -7,6 +7,7 @@ import {FormsModule} from '@angular/forms';
   selector: 'app-admin-dashboard',
   imports: [
     RouterOutlet,
+    RouterLink,
     CommonModule,
     FormsModule
   ],

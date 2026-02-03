@@ -44,8 +44,10 @@ public class OrderController {
         return orderService.addOrder(order);
     }
 
-    @PutMapping
-    public Order updateOrder(@RequestBody Order order){
+    @PutMapping("/{id}")
+    public Order updateOrder(@RequestBody Order order,
+                             @PathVariable Integer id){
+         order.setOrderId(id);
         return orderService.updateOrder(order);
     }
 

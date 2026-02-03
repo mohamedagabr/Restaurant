@@ -1183,3 +1183,20 @@ section {
   color: aliceblue;
 }
 
+.label-title{
+  background: #212529;
+  color: #fff;
+  padding: 3px 5px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.label-title-dashboard{
+  background: #212529;
+  color: #fff;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+

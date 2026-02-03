@@ -25,14 +25,17 @@ public class CategoryController {
     }
 
     @PostMapping
-    private Category addCategory(Category category){
+    private Category addCategory(@RequestBody Category category){
         return categoryService.addCategory(category);
     }
 
-    @PutMapping
-    private Category updateCategory(Category category){
+    @PutMapping("/{id}")
+    public Category updateCategory(@PathVariable Integer id,
+                                   @RequestBody Category category) {
+        category.setCategoryId(id);
         return categoryService.updateCategory(category);
     }
+
 
     @GetMapping("/byCategoryId")
     private Category getCategoryById(@RequestParam Integer id){
